@@ -16,6 +16,22 @@ dist/
 # Log files
 *.log
 
+# Local environment and secret files
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+*.secrets.*
+*credentials*
+*credential*
+*.pem
+*.key
+*.p12
+*.pfx
+src/main/resources/application-secrets.properties
+src/main/resources/application-*.secrets.properties
+
 # Package files
 *.jar
 
@@ -47,4 +63,3 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-

@@ -1,4 +1,4 @@
-package com.mycomp.firstapp;
+package com.mycomp.firstapp.controller;
 
 import java.math.BigInteger;
 
@@ -18,15 +18,15 @@ public class AdditionController {
 
 	@PostConstruct
 	public void logDbIp() {
-		log.info("Configured db_ip: {}", dbIp);
+		// log.info("Configured db_ip: {}", dbIp);
 	}
 
 	@GetMapping("/api/add")
 	public SumResponse add(@RequestParam BigInteger a, @RequestParam BigInteger b) {
-		log.info("Configured db_ip: {}", dbIp);
-		log.info("Adding numbers: a={}, b={}", a, b);
+		// log.info("Configured db_ip: {}", dbIp);
+		// log.info("Adding numbers: a={}, b={}", a, b);
 		SumResponse response = new SumResponse(a.add(b));
-		log.info("Returning sum: {}", response.sum());
+		// log.info("Returning sum: {}", response.sum());
 		return response;
 	}
 
