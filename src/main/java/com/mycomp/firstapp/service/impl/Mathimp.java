@@ -1,5 +1,7 @@
 package com.mycomp.firstapp.service.impl;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -14,9 +16,16 @@ public class Mathimp implements MathService {
     @Value("${db_ip}")
     private String dbIp;
 
+    private Random random;
+
+    public Mathimp(Random random) {
+        this.random = random;
+    }
+
     @PostConstruct
     public void logDbIp() {
         log.info("Configured db_ip: {}", dbIp);
+        log.info("Random instance initialized: {}", random);
     }
 
     @Override
