@@ -16,7 +16,7 @@ public class Appconfig {
         return new Random();
     }
 
-    @Bean
+    // @Bean
     public JsonMapper jsonMapper() {
         return JsonMapper.builder()
                 .enable(SerializationFeature.INDENT_OUTPUT)
